@@ -14,6 +14,19 @@ struct Home: View {
     var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
+            VStack {
+                // MARK: Display
+                Spacer()
+                HStack {
+                    Spacer()
+                    
+                    Text("\(displayValue)")
+                        .bold()
+                        .font(.system(size: 100))
+                        .foregroundColor(.white)
+                }
+                .padding()
+            }
         }
     }
 }
