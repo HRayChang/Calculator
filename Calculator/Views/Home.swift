@@ -26,6 +26,9 @@ struct Home: View {
                         .foregroundColor(.white)
                 }
                 .padding()
+                
+                // MARK: Buttons
+                
             }
         }
     }
