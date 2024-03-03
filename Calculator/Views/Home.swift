@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct Home: View {
+    
+    @State var displayValue = 0
+    
     var body: some View {
-        
+        ZStack {
+            Color.black.edgesIgnoringSafeArea(.all)
+        }
     }
 }
 
