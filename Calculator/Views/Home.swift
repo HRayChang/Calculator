@@ -11,6 +11,15 @@ struct Home: View {
     
     @State var displayValue = 0
     
+    // Buttons
+    let buttons: [[CalculatorButtons]] = [
+        [.clear, .negative, .percent, .divide],
+        [.seven, .eight, .nine, .multiply],
+        [.four, .five, .six, .subtract],
+        [.one, .two, .three, .add],
+        [.zero, .decimal, .equal]
+    ]
+    
     var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
