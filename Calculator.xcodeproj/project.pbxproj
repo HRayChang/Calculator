@@ -12,6 +12,7 @@
 		730DE1402B947CF90051198B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730DE13F2B947CF90051198B /* Assets.xcassets */; };
 		730DE1432B947CF90051198B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730DE1422B947CF90051198B /* Preview Assets.xcassets */; };
 		730DE14B2B947EA20051198B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DE14A2B947EA10051198B /* Home.swift */; };
+		730DE14E2B94832D0051198B /* CalculatorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DE14D2B94832D0051198B /* CalculatorButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		730DE13F2B947CF90051198B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		730DE1422B947CF90051198B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		730DE14A2B947EA10051198B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		730DE14D2B94832D0051198B /* CalculatorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				730DE13B2B947CF70051198B /* CalculatorApp.swift */,
 				730DE13D2B947CF70051198B /* ContentView.swift */,
+				730DE14C2B9482FD0051198B /* Model */,
 				730DE1492B947E8A0051198B /* Views */,
 				730DE13F2B947CF90051198B /* Assets.xcassets */,
 				730DE1412B947CF90051198B /* Preview Content */,
@@ -76,6 +79,14 @@
 				730DE14A2B947EA10051198B /* Home.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		730DE14C2B9482FD0051198B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				730DE14D2B94832D0051198B /* CalculatorButtons.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 				730DE13E2B947CF70051198B /* ContentView.swift in Sources */,
 				730DE14B2B947EA20051198B /* Home.swift in Sources */,
 				730DE13C2B947CF70051198B /* CalculatorApp.swift in Sources */,
+				730DE14E2B94832D0051198B /* CalculatorButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
