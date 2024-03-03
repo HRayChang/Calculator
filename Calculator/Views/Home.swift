@@ -37,9 +37,37 @@ struct Home: View {
                 .padding()
                 
                 // MARK: Buttons
-                
+                ForEach(buttons, id: \.self) { row in
+                    
+                    HStack(spacing: 12) {
+                        ForEach(row, id: \.self) { item in
+                            Button {
+                                
+                            } label: {
+                                Text(item.rawValue)
+                                    .font(.system(size: 32))
+                                    .frame(width: self.buttonWidth(item: item), height: self.buttonHeight())
+                                    .background(item.buttonColor)
+                                    .clipShape(.rect(cornerRadius: self.buttonWidth(item: item) / 2))
+                            }
+                        }
+                    }
+                }
             }
         }
+    }
+    
+    // Button Width
+    func buttonWidth(item: CalculatorButtons) -> CGFloat {
+        if item == .zero {
+            return ((UIScreen.main.bounds.width - (4 * 12)) / 4) * 2
+        }
+        return (UIScreen.main.bounds.width - (5 * 12)) / 4
+    }
+    
+    // Button Height
+    func buttonHeight() -> CGFloat {
+        return (UIScreen.main.bounds.width - (5 * 12)) / 4
     }
 }
 
