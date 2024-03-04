@@ -9,7 +9,9 @@ import SwiftUI
 
 struct Home: View {
     
-    @State var displayValue = 0
+    @State var displayValue = "0"
+    @State var computeValue = 0
+    @State var currentOperator: Operation = .none
     
     // Buttons
     let buttons: [[CalculatorButtons]] = [
@@ -42,7 +44,7 @@ struct Home: View {
                     HStack(spacing: 12) {
                         ForEach(row, id: \.self) { item in
                             Button {
-                                
+                                self.didTap(button: item)
                             } label: {
                                 Text(item.rawValue)
                                     .font(.system(size: 32))
@@ -70,6 +72,56 @@ struct Home: View {
     // Button Height
     func buttonHeight() -> CGFloat {
         return (UIScreen.main.bounds.width - (5 * 12)) / 4
+    }
+    
+    // MARK: DidTap Function
+    func didTap(button: CalculatorButtons) {
+        switch button {
+        case .add, .subtract, .multiply, .divide, .equal:
+            if button == .add {
+                self.currentOperator = .add
+                self.computeValue = Int(self.displayValue) ?? 0
+            } else if button == .subtract {
+                self.currentOperator = .subtract
+                self.computeValue = Int(self.displayValue) ?? 0
+            } else if button == .divide {
+                self.currentOperator = .divide
+                self.computeValue = Int(self.displayValue) ?? 0
+            } else if button == .multiply {
+                self.currentOperator = .multiply
+                self.computeValue = Int(self.displayValue) ?? 0
+            } else if button == .equal {
+                let runningValue = self.computeValue
+                let currentValue = Int(self.displayValue) ?? 0
+                switch self.currentOperator {
+                case .add:
+                    self.displayValue = "\(runningValue + currentValue)"
+                case .subtract:
+                    self.displayValue = "\(runningValue - currentValue)"
+                case .divide:
+                    self.displayValue = "\(runningValue / currentValue)"
+                case .multiply:
+                    self.displayValue = "\(runningValue * currentValue)"
+                case .none:
+                    break
+                }
+            }
+            
+            if button != .equal {
+                self.displayValue = "0"
+            }
+        case .clear:
+            self.displayValue = "0"
+        case .decimal, .negative, .percent:
+            break
+        default:
+            let number = button.rawValue
+            if self.displayValue == "0" {
+                displayValue = number
+            } else {
+                self.displayValue = "\(self.displayValue)\(number)"
+            }
+        }
     }
 }
 
