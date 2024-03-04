@@ -49,9 +49,11 @@ struct Home: View {
                                     .frame(width: self.buttonWidth(item: item), height: self.buttonHeight())
                                     .background(item.buttonColor)
                                     .clipShape(.rect(cornerRadius: self.buttonWidth(item: item) / 2))
+                                    .foregroundColor(.white)
                             }
                         }
                     }
+                    .padding(.bottom, 3)
                 }
             }
         }
