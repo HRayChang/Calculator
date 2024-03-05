@@ -8,7 +8,7 @@
 
 A project aimed at cloning an APPLE calculator app.
 
-<img src="https://github.com/HRayChang/Calculator/assets/111962195/3c178e04-7a6b-4ed1-988b-ab88f8cd98e6" alt="Artwork" width="800">
+<img src="https://github.com/HRayChang/Calculator/assets/111962195/3c178e04-7a6b-4ed1-988b-ab88f8cd98e6" alt="Artwork" width="400">
 </div>
 
 <br />
